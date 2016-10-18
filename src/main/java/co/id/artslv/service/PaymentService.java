@@ -81,7 +81,7 @@ public class PaymentService {
             throw new CustomException(new CustomErrorResponse("08", "Transaction timeout"));
         }
         else if(trans.getStatus().equals("1")){
-            int comp = Double.compare(trans.getNetamount(),transaction.getNetamount());
+            int comp = trans.getNetamount().compareTo(transaction.getNetamount());
             if(comp != 0) {
                 throw new CustomException(new CustomErrorResponse("09","Net Amount doesn't match"));
             }
@@ -103,6 +103,7 @@ public class PaymentService {
                 boarding.setCreatedon(LocalDateTime.now());
                 boarding.setModifiedby("userpos");
                 boarding.setModifiedon(LocalDateTime.now());
+                boarding.setTime(LocalDateTime.now());
                 boardingRepository.save(boarding);
 
                 //update tabel arts_t_transactiondet
