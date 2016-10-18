@@ -106,6 +106,7 @@ public class PaymentService {
                 boarding.setTime(LocalDateTime.now());
                 boardingRepository.save(boarding);
 
+
                 //update tabel arts_t_transactiondet
                 transdet.setStatus("2");
                 transdet.setUseridpay("userpos");
