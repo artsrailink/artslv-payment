@@ -10,7 +10,7 @@ import java.util.List;
 
 
 public class PaymentServiceTest {
-    @Test
+    /*@Test
     public void deserialize() throws IOException {
         String jsondata = "{\n" +
                 "\t\"response\": {\n" +
@@ -158,5 +158,5 @@ public class PaymentServiceTest {
         MessageWrapper<Object> messageWrapper = new MessageWrapper<>();
         List<Transactiondet> transactiondetList = messageWrapper.getValue(message,"transactiondetlist",List.class);
         Transaction transaction = messageWrapper.getValue(message,"transaction",Transaction.class);
-    }
+    }*/
 }
