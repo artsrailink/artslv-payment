@@ -1,6 +1,6 @@
 package co.kereta.artslv;
 
-import co.id.artslv.lib.response.MessageWrapper;
+import co.id.artslv.lib.responses.MessageWrapper;
 import co.id.artslv.lib.transactions.Transaction;
 import co.id.artslv.lib.transactions.Transactiondet;
 import org.junit.Test;
@@ -8,9 +8,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Created by root on 03/10/16.
- */
+
 public class PaymentServiceTest {
     @Test
     public void deserialize() throws IOException {
